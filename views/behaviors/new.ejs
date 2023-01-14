@@ -7,14 +7,14 @@
   <h1>Add a Behavior</h1>
   <form action="/behaviors" method="POST">
     <label for="gorilla-select">Gorilla:</label>
-    <select name="gorilla" id="gorilla-select">
+    <select name="gorilla" id="gorilla-select" required>
       <option value="">--Gorilla--</option>
       <% gorillas.forEach(gorilla => { %>
-        <option value="<%= gorilla.name %>"><%= gorilla.name %></option>
+        <option value="<%= gorilla._id %>"><%= gorilla.name %></option>
       <% }) %>
     </select>
     <label for="behavior-input">Behavior:</label>
-    <input type="text" id="behavior-input">
+    <input name="behavior" type="text" id="behavior-input" required>
     <label for="status-select">Status:</label>
     <select name="status" id="status-select">
       <option value="">--Status--</option>

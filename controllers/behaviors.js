@@ -2,8 +2,10 @@ import { Behavior } from "../models/behavior.js"
 import { Gorilla } from "../models/gorilla.js"
 
 function index(req, res){
-  console.log('Listing Behaviors!');
+  // console.log('Listing Behaviors!');
   Behavior.find({})
+  .populate("gorilla")
+  .populate("keeper")
   .then(behaviors => {
     res.render('behaviors/index', {
       behaviors,
@@ -30,20 +32,24 @@ function newBehavior(req, res) {
   })
 }
 
-// function create(req, res) {
-//   Gorilla.create(req.body)
-//   .then(gorilla => {
-//     res.redirect('/gorillas')
-//   })
-//   .catch(err => {
-//     res.redirect('/')
-//     console.log(err);
-//   })
-// }
+function create(req, res) {
+  console.log('creating new behavior!');
+  console.log(req.body)
+  console.log(req.user.profile._id);
+  req.body.keeper = req.user.profile._id
+  Behavior.create(req.body)
+  .then(behavior => {
+    res.redirect('/behaviors')
+  })
+  .catch(err => {
+    res.redirect('/')
+    console.log(err);
+  })
+}
 
 export {
   index,
   newBehavior as new,
-  // create,
+  create,
 
 }

@@ -26,9 +26,9 @@
     <tbody>
       <% behaviors.forEach(behavior => { %>
         <tr>
-          <td><%= behavior.gorilla %></td>
+          <td><%= behavior.gorilla.name %></td>
           <td><%= behavior.behavior %></td>
-          <td><%= behavior.keeper %></td>
+          <td><%= behavior.keeper.name %></td>
           <td><%= behavior.status %></td>
           <td><button>Details</button></td>
         </tr>

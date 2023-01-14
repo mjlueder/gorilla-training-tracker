@@ -7,7 +7,7 @@ const router = Router()
 router.get('/', isLoggedIn, behaviorsCtrl.index)
 router.get('/new', isLoggedIn, behaviorsCtrl.new)
 
-// router.post('/', isLoggedIn, gorillasCtrl.create)
+router.post('/', isLoggedIn, behaviorsCtrl.create)
 
 export {
   router
