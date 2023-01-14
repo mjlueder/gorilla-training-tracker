@@ -1,0 +1,23 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="stylesheets/gorillas/index.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <% if (user) { %>
+  <h2>Add a Behavior</h2>
+  <form action="/gorillas" method="POST">
+    <label for="name-input">Name:</label>
+      <input name="name" type="text" id="name-input" autocomplete="off">
+    <label for="age-input">Age:</label>
+      <input name="age" type="text" id="age-input" autocomplete="off">
+    <label for="group-input">Social Group:</label>
+      <select name="group" id="group-input">
+        <option value="Family">Family</option>
+        <option value="Bachelor">Bachelor</option>
+      </select>
+    <div></div>
+    <button type="submit">Submit</button>
+  </form>
+<% } %>
+</main>
+<%- include('../partials/footer') %>

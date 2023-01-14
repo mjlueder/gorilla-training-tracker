@@ -1,0 +1,41 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="stylesheets/gorillas/index.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <% if (user) { %>
+  <h1>Training Behaviors</h1>
+  <div id="buttons">
+    <select name="" id="">
+      <option value="">--All Gorillas--</option>
+    </select>
+    <a href="/behaviors/new">
+      <button>Add New Behavior</button>
+    </a>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Gorilla</th>
+        <th>Behavior</th>
+        <th>Keeper</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% behaviors.forEach(behavior => { %>
+        <tr>
+          <td><%= behavior.gorilla %></td>
+          <td><%= behavior.behavior %></td>
+          <td><%= behavior.keeper %></td>
+          <td><%= behavior.status %></td>
+          <td><button>Details</button></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+<% } %>
+
+</main>
+<%- include('../partials/footer') %>
