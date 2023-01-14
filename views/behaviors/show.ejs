@@ -1,0 +1,24 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/behaviors/show.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <% if (user) { %>
+  <h1>Behavior Details</h1>
+  <div id="show">
+    <div>Behavior:</div>
+    <div><%= behavior.behavior %></div>
+    <div>Gorilla:</div>
+    <div><%= behavior.gorilla.name %></div>
+    <div>Keeper:</div>
+    <div><%= behavior.keeper.name %></div>
+    <div>Status:</div>
+    <div><%= behavior.status %></div>
+    <% if (behavior.comment) { %>
+      <div>Comment:</div>
+      <div><%= behavior.comment %></div>
+    <% } %>
+  </div>
+<% } %>
+</main>
+<%- include('../partials/footer') %>

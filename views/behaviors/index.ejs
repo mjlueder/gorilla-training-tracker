@@ -30,7 +30,10 @@
           <td><%= behavior.behavior %></td>
           <td><%= behavior.keeper.name %></td>
           <td><%= behavior.status %></td>
-          <td><button>Details</button></td>
+          <td>
+            <a href="/behaviors/<%= behavior._id %>">
+              <button>Details</button></td>
+            </a>
         </tr>
       <% }) %>
     </tbody>

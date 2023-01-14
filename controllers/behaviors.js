@@ -47,9 +47,26 @@ function create(req, res) {
   })
 }
 
+function show(req, res) {
+  Behavior.findById(req.params.id)
+  .populate('gorilla')
+  .populate('keeper')
+  .then(behavior => {
+    res.render('behaviors/show', {
+      title: 'Behavior Details',
+      behavior
+    })
+  })
+  .catch(err => {
+    res.redirect('/')
+    console.log(err);
+  })
+}
+
 export {
   index,
   newBehavior as new,
   create,
+  show,
 
 }
