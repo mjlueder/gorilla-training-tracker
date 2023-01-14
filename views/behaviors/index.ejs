@@ -3,8 +3,12 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <% if (user) { %>
   <h1>Training Behaviors</h1>
+  <% if (!user) { %>
+    <h2>Please login to see this page</h2>
+    <img src="/assets/Grace.jpeg" alt="Baby gorilla eating a banana leaf">
+  <% } %>
+  <% if (user) { %>
   <div id="buttons">
     <select name="" id="">
       <option value="">--All Gorillas--</option>

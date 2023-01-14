@@ -19,6 +19,11 @@
       <div><%= behavior.comment %></div>
     <% } %>
   </div>
+  <% if (behavior.keeper.equals(user.profile._id)) { %>
+    <a href="/behaviors/<%= behavior._id %>/edit">
+      <button>Edit Behavior</button>
+    </a>
+  <% } %>
 <% } %>
 </main>
 <%- include('../partials/footer') %>

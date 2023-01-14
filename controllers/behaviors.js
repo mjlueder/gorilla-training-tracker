@@ -63,10 +63,30 @@ function show(req, res) {
   })
 }
 
+function edit(req, res) {
+  Behavior.findById(req.params.id)
+  .populate('gorilla')
+  .populate('keeper')
+  .then(behavior => {
+    Gorilla.find({})
+    .then(gorillas => {
+      res.render('behaviors/edit', {
+        title: 'Edit Behavior',
+        behavior,
+        gorillas
+      })
+    })
+  })
+  .catch(err => {
+    res.redirect('/')
+    console.log(err);
+  })
+}
+
 export {
   index,
   newBehavior as new,
   create,
   show,
-
+  edit,
 }
