@@ -1,20 +1,29 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="stylesheets/gorillas/index.css">
+<link rel="stylesheet" href="/stylesheets/behaviors/new.css">
 <%- include('../partials/nav') %>
 
 <main>
   <% if (user) { %>
-  <h2>Add a Behavior</h2>
-  <form action="/gorillas" method="POST">
-    <label for="name-input">Name:</label>
-      <input name="name" type="text" id="name-input" autocomplete="off">
-    <label for="age-input">Age:</label>
-      <input name="age" type="text" id="age-input" autocomplete="off">
-    <label for="group-input">Social Group:</label>
-      <select name="group" id="group-input">
-        <option value="Family">Family</option>
-        <option value="Bachelor">Bachelor</option>
-      </select>
+  <h1>Add a Behavior</h1>
+  <form action="/behaviors" method="POST">
+    <label for="gorilla-select">Gorilla:</label>
+    <select name="gorilla" id="gorilla-select">
+      <option value="">--Gorilla--</option>
+      <% gorillas.forEach(gorilla => { %>
+        <option value="<%= gorilla.name %>"><%= gorilla.name %></option>
+      <% }) %>
+    </select>
+    <label for="behavior-input">Behavior:</label>
+    <input type="text" id="behavior-input">
+    <label for="status-select">Status:</label>
+    <select name="status" id="status-select">
+      <option value="">--Status--</option>
+      <option value="Shaping">Shaping</option>
+      <option value="Maintenance">Maintenance</option>
+      <option value="Regressed">Regressed</option>
+    </select>
+    <label for="comment-input">Comment:</label>
+    <textarea name="comment" id="comment-input" rows="8"></textarea>
     <div></div>
     <button type="submit">Submit</button>
   </form>

@@ -41,6 +41,10 @@ main {
   flex-direction: column;
 }
 
+main img {
+  border: 2px solid rgb(15, 64, 32);
+}
+
 .right {
   margin-left: auto;
 }

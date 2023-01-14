@@ -2,15 +2,9 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-  <% } %>
+  <h2>hello, <%= user ? user.profile.name : "friend" %></h2>
+  <h1>Gorilla Training</h1>
+  <img src="/assets/Grace.jpeg" alt="Baby gorilla eating a banana leaf">
 </main>
 
 <%- include('./partials/footer') %>
