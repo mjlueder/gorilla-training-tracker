@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-color: #1a1a1a;
+  background-color: #81ba94;
   color: #f6f6f6;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
@@ -25,8 +25,13 @@ nav {
   color: #1a1a1a;
   display: flex;
   align-items: center;
-  padding: 10px;
-  min-height: 60px;
+  justify-content: space-between;
+  padding-right: 10px;
+  min-height: 80px;
+}
+
+nav img {
+  height: 80px;
 }
 
 main {
