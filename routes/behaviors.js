@@ -11,6 +11,8 @@ router.get('/:id/edit', isLoggedIn, behaviorsCtrl.edit)
 
 router.post('/', isLoggedIn, behaviorsCtrl.create)
 
+router.put('/:id', isLoggedIn, behaviorsCtrl.update)
+
 export {
   router
 }

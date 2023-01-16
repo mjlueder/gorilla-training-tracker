@@ -4,26 +4,26 @@
 
 <main>
   <% if (user) { %>
-  <h1>Add a Behavior</h1>
-  <form action="/behaviors" method="POST">
+  <h1>Edit Behavior</h1>
+  <form action="/behaviors/<%= behavior._id %>?_method=PUT" method="POST">
     <label for="gorilla-select">Gorilla:</label>
-    <select name="gorilla" id="gorilla-select" required>
-      <option value=""><%= behavior.gorilla.name %></option>
+    <select name="gorilla" id="gorilla-select">
+      <option value="<%= behavior.gorilla._id %>"><%= behavior.gorilla.name %></option>
       <% gorillas.forEach(gorilla => { %>
         <option value="<%= gorilla._id %>"><%= gorilla.name %></option>
       <% }) %>
     </select>
     <label for="behavior-input">Behavior:</label>
-    <input name="behavior" type="text" id="behavior-input" required value="<%= behavior.behavior %>">
+    <input name="behavior" type="text" id="behavior-input" value="<%= behavior.behavior %>">
     <label for="status-select">Status:</label>
     <select name="status" id="status-select">
-      <option value=""><%= behavior.status %></option>
+      <option value="<%= behavior.status %>"><%= behavior.status %></option>
       <option value="Shaping">Shaping</option>
       <option value="Maintenance">Maintenance</option>
       <option value="Regressed">Regressed</option>
     </select>
     <label for="comment-input">Comment:</label>
-    <textarea name="comment" id="comment-input" rows="8"><%= behavior.comment %></textarea>
+    <textarea name="comment" value="<%= behavior.comment %>" id="comment-input" rows="8"><%= behavior.comment %></textarea>
     <div></div>
     <button type="submit">Submit</button>
   </form>

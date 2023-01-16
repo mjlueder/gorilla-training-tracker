@@ -33,7 +33,6 @@ function newBehavior(req, res) {
 }
 
 function create(req, res) {
-  console.log('creating new behavior!');
   console.log(req.body)
   console.log(req.user.profile._id);
   req.body.keeper = req.user.profile._id
@@ -83,10 +82,33 @@ function edit(req, res) {
   })
 }
 
+function update(req, res) {
+  Behavior.findById(req.params.id)
+  // .populate('gorilla')
+  // .populate('keeper')
+  .then(behavior => {
+    console.log(behavior);
+    if(behavior.keeper.equals(req.user.profile._id)) {
+      behavior.updateOne(req.body)
+      .then(() => {
+        res.redirect(`/behaviors/${behavior._id}`)
+      })
+    } else {
+      throw new Error("User is not authorized")
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/behaviors')
+  })
+}
+
 export {
   index,
   newBehavior as new,
   create,
   show,
   edit,
+  update,
+
 }
