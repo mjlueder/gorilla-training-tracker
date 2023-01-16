@@ -84,10 +84,7 @@ function edit(req, res) {
 
 function update(req, res) {
   Behavior.findById(req.params.id)
-  // .populate('gorilla')
-  // .populate('keeper')
   .then(behavior => {
-    console.log(behavior);
     if(behavior.keeper.equals(req.user.profile._id)) {
       behavior.updateOne(req.body)
       .then(() => {
@@ -103,6 +100,24 @@ function update(req, res) {
   })
 }
 
+function deleteBehavior(req, res) {
+  Behavior.findById(req.params.id)
+  .then(behavior => {
+    if (behavior.keeper.equals(req.user.profile._id)) {
+      behavior.delete()
+      .then(() => {
+        res.redirect('/behaviors')
+      })
+    } else {
+      throw new Error('User is not authorized')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/behaviors')
+  })
+}
+
 export {
   index,
   newBehavior as new,
@@ -110,5 +125,5 @@ export {
   show,
   edit,
   update,
-
+  deleteBehavior as delete,
 }

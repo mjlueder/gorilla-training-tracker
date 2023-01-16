@@ -23,6 +23,9 @@
     <a href="/behaviors/<%= behavior._id %>/edit">
       <button>Edit Behavior</button>
     </a>
+    <form action="/behaviors/<%= behavior._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete Behavior</button>
+    </form>
   <% } %>
 <% } %>
 </main>
