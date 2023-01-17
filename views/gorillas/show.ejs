@@ -1,0 +1,23 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/gorillas/show.css">
+<%- include('../partials/nav') %>
+
+<main>
+  <h1>Gorilla Details</h1>
+  <div id="show">
+    <div>Name:</div>
+    <div><%= gorilla.name %></div>
+    <div>Age:</div>
+    <div><%= gorilla.age %></div>
+    <div>Sex:</div>
+    <div><%= gorilla.sex %></div>
+    <div>Group:</div>
+    <div><%= gorilla.group %></div>
+    <div>Familial Relationships:</div>
+    <div><%= gorilla.family %></div>
+    
+    <% if (user) { %>
+    <% } %>
+  </div>
+</main>
+<%- include('../partials/footer') %>

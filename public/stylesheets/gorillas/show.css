@@ -1,0 +1,15 @@
+#show {
+  display: grid;
+  grid-template-columns: 180px 240px;
+  grid-gap: 16px;
+  font-size: 24px;
+}
+
+#show * {
+  padding: 2px;
+  border-radius: 5px;
+}
+
+#show div:nth-child(odd) {
+  font-weight: bold;
+}

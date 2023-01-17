@@ -25,8 +25,18 @@ function create(req, res) {
   })
 }
 
+function show(req, res){
+  Gorilla.findById(req.params.id)
+  .then(gorilla => {
+    res.render('gorillas/show', {
+      title: 'Gorilla',
+      gorilla
+    })
+  })
+}
+
 export {
   index,
   create,
-
+  show,
 }

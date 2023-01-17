@@ -5,6 +5,7 @@ import { isLoggedIn } from '../middleware/middleware.js'
 const router = Router()
 
 router.get('/', gorillasCtrl.index)
+router.get('/:id', gorillasCtrl.show)
 
 router.post('/', isLoggedIn, gorillasCtrl.create)
 

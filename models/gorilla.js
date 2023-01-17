@@ -8,11 +8,12 @@ const gorillaSchema = new Schema({
   sex: {
     type: String,
     enum: ['Male', 'Female']
-  }
+  },
   group: { 
     type: String,
     enum: ['Family', 'Bachelor']
-  }
+  },
+  family: String,
 }, {
   timestamps: true
 })

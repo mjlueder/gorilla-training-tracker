@@ -1,18 +1,48 @@
-table {
+/* table {
   text-align: center;
-}
+} */
 
 th {
   border-bottom: 2px solid #f6f6f6;
+  text-align: left;
 }
 
 form {
   display: grid;
   grid-template-columns: 120px 160px;
   grid-gap: 10px;
+  margin-bottom: 50px;
 }
 
 form * {
   padding: 2px;
   border-radius: 5px;
+}
+
+table {
+  table-layout: fixed;
+  width: 60%;
+  border-collapse: collapse;
+  /* border: 3px solid purple; */
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th,
+td {
+  padding: 10px;
 }

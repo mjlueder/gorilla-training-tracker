@@ -16,7 +16,11 @@
   <tbody>
     <% gorillas.forEach(gorilla => { %>
       <tr>
-        <td><%= gorilla.name %></td>
+        <td>
+          <a href="/gorillas/<%= gorilla._id %>">
+          <%= gorilla.name %>
+          </a>
+        </td>
         <td><%= gorilla.age %></td>
         <td><%= gorilla.sex === "Male" ? 'M' : 'F' %></td>
         <td><%= gorilla.group %></td>
@@ -44,6 +48,8 @@
       <option value="Family">Family</option>
       <option value="Bachelor">Bachelor</option>
     </select>
+    <label for="family-input">Family:</label>
+    <textarea name="family" id="family-input"></textarea>
     <div></div>
     <button type="submit">Submit</button>
   </form>
