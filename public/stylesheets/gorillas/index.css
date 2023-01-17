@@ -23,7 +23,7 @@ table {
   table-layout: fixed;
   width: 70%;
   border-collapse: collapse;
-  /* border: 3px solid purple; */
+  margin-bottom: 50px;
 }
 
 thead th:nth-child(1) {

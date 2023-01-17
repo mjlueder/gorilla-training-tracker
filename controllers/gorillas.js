@@ -42,8 +42,15 @@ function show(req, res){
   })
 }
 
+function newGorilla(req, res) {
+  res.render('gorillas/new', {
+    title: 'Add a Gorilla'
+  })
+}
+
 export {
   index,
   create,
   show,
+  newGorilla as new,
 }
