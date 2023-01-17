@@ -1,5 +1,5 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="stylesheets/gorillas/index.css">
+<link rel="stylesheet" href="stylesheets/behaviors/index.css">
 <%- include('../partials/nav') %>
 
 <main>
@@ -17,6 +17,7 @@
       <button>Add New Behavior</button>
     </a>
   </div>
+  <h2>Shaping: In training</h2>
   <table>
     <thead>
       <tr>
@@ -29,16 +30,74 @@
     </thead>
     <tbody>
       <% behaviors.forEach(behavior => { %>
-        <tr>
-          <td><%= behavior.gorilla.name %></td>
-          <td><%= behavior.behavior %></td>
-          <td><%= behavior.keeper.name %></td>
-          <td><%= behavior.status %></td>
-          <td>
-            <a href="/behaviors/<%= behavior._id %>">
-              <button>Details</button></td>
-            </a>
-        </tr>
+        <% if (behavior.status === "Shaping") { %>
+          <tr>
+            <td><%= behavior.gorilla.name %></td>
+            <td><%= behavior.behavior %></td>
+            <td><%= behavior.keeper.name %></td>
+            <td><%= behavior.status %></td>
+            <td>
+              <a href="/behaviors/<%= behavior._id %>">
+                <button>Details</button></td>
+              </a>
+          </tr>
+        <% } %> 
+      <% }) %>
+    </tbody>
+  </table>
+  <h2>Maintenance: Fully trained</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Gorilla</th>
+        <th>Behavior</th>
+        <th>Keeper</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% behaviors.forEach(behavior => { %>
+        <% if (behavior.status === "Maintenance") { %>
+          <tr>
+            <td><%= behavior.gorilla.name %></td>
+            <td><%= behavior.behavior %></td>
+            <td><%= behavior.keeper.name %></td>
+            <td><%= behavior.status %></td>
+            <td>
+              <a href="/behaviors/<%= behavior._id %>">
+                <button>Details</button></td>
+              </a>
+          </tr>
+        <% } %> 
+      <% }) %>
+    </tbody>
+  </table>
+  <h2>Regressed: Previously trained, needs to be re-shaped</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Gorilla</th>
+        <th>Behavior</th>
+        <th>Keeper</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% behaviors.forEach(behavior => { %>
+        <% if (behavior.status === "Regressed") { %>
+          <tr>
+            <td><%= behavior.gorilla.name %></td>
+            <td><%= behavior.behavior %></td>
+            <td><%= behavior.keeper.name %></td>
+            <td><%= behavior.status %></td>
+            <td>
+              <a href="/behaviors/<%= behavior._id %>">
+                <button>Details</button></td>
+              </a>
+          </tr>
+        <% } %> 
       <% }) %>
     </tbody>
   </table>

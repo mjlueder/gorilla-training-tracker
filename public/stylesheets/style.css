@@ -27,11 +27,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding-right: 10px;
-  min-height: 80px;
-}
-
-nav img {
-  height: 80px;
+  min-height: 70px;
 }
 
 main {
@@ -43,6 +39,45 @@ main {
 
 main img {
   border: 2px solid rgb(15, 64, 32);
+}
+
+nav > div.icon {
+  width: 200px;
+}
+
+nav > div.oauth {
+  width: 200px;
+  text-align: right;
+}
+
+nav > div.links {
+  width: 300px;
+  text-align: center;
+}
+
+nav img {
+  height: 70px;
+}
+
+nav a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: #2f773a;
+}
+
+nav a:visited {
+  color: #424748;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #424748;
+}
+
+nav a.active {
+  color: rgb(16, 94, 18);
 }
 
 .right {

@@ -2,11 +2,12 @@ import { Behavior } from "../models/behavior.js"
 import { Gorilla } from "../models/gorilla.js"
 
 function index(req, res){
-  // console.log('Listing Behaviors!');
+  console.log("Query", req.query);
   Behavior.find({})
   .populate("gorilla")
   .populate("keeper")
   .then(behaviors => {
+    console.log(behaviors);
     res.render('behaviors/index', {
       behaviors,
       title: 'Training Behaviors'
