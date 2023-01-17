@@ -1,4 +1,5 @@
 import { Gorilla } from "../models/gorilla.js"
+import { Behavior } from "../models/behavior.js"
 
 function index(req, res){
   Gorilla.find({})
@@ -28,9 +29,15 @@ function create(req, res) {
 function show(req, res){
   Gorilla.findById(req.params.id)
   .then(gorilla => {
-    res.render('gorillas/show', {
-      title: 'Gorilla',
-      gorilla
+    Behavior.find({ gorilla: req.params.id })
+    .populate("keeper")
+    .then(behaviors => {
+      console.log(behaviors);
+      res.render('gorillas/show', {
+        title: 'Gorilla',
+        gorilla,
+        behaviors,
+      })
     })
   })
 }

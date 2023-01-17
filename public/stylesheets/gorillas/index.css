@@ -21,7 +21,7 @@ form * {
 
 table {
   table-layout: fixed;
-  width: 60%;
+  width: 70%;
   border-collapse: collapse;
   /* border: 3px solid purple; */
 }
@@ -35,11 +35,15 @@ thead th:nth-child(2) {
 }
 
 thead th:nth-child(3) {
-  width: 15%;
+  width: 10%;
 }
 
 thead th:nth-child(4) {
-  width: 35%;
+  width: 25%;
+}
+
+thead th:nth-child(5){
+ width: 15%;
 }
 
 th,

@@ -11,19 +11,21 @@
       <th>Age</th>
       <th>Sex</th>
       <th>Social Group</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <% gorillas.forEach(gorilla => { %>
       <tr>
-        <td>
-          <a href="/gorillas/<%= gorilla._id %>">
-          <%= gorilla.name %>
-          </a>
-        </td>
+        <td><%= gorilla.name %></td>
         <td><%= gorilla.age %></td>
         <td><%= gorilla.sex === "Male" ? 'M' : 'F' %></td>
         <td><%= gorilla.group %></td>
+        <td>
+          <a href="/gorillas/<%= gorilla._id %>">
+            <button>Details</button>
+          </a>
+        </td>
       </tr>
     <% }) %>
   </tbody>

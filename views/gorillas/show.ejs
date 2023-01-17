@@ -15,9 +15,36 @@
     <div><%= gorilla.group %></div>
     <div>Familial Relationships:</div>
     <div><%= gorilla.family %></div>
-    
-    <% if (user) { %>
-    <% } %>
   </div>
+
+  <% if (user) { %>
+    <% if (behaviors) { %>
+      <h2>Current Behaviors</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Behavior</th>
+            <th>Keeper</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% behaviors.forEach(behavior => { %>
+            <tr>
+              <td><%= behavior.behavior %></td>
+              <td><%= behavior.keeper.name %></td>
+              <td><%= behavior.status %></td>
+              <td>
+                <a href="/behaviors/<%= behavior._id %>">
+                  <button>Details</button></td>
+                </a>
+              </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <% } %>
+  <% } %>
+  
 </main>
 <%- include('../partials/footer') %>
