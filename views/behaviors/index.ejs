@@ -9,14 +9,11 @@
     <img src="/assets/Grace.jpeg" alt="Baby gorilla eating a banana leaf">
   <% } %>
   <% if (user) { %>
-  <div id="buttons">
-    <select name="" id="">
-      <option value="">--All Gorillas--</option>
-    </select>
+  <!-- <div id="buttons"> -->
     <a href="/behaviors/new">
       <button>Add New Behavior</button>
     </a>
-  </div>
+  <!-- </div> -->
   <h2>Shaping: In training</h2>
   <table>
     <thead>
@@ -24,7 +21,7 @@
         <th>Gorilla</th>
         <th>Behavior</th>
         <th>Keeper</th>
-        <th>Status</th>
+        <th>Social Group</th>
         <th></th>
       </tr>
     </thead>
@@ -35,7 +32,7 @@
             <td><%= behavior.gorilla.name %></td>
             <td><%= behavior.behavior %></td>
             <td><%= behavior.keeper.name %></td>
-            <td><%= behavior.status %></td>
+            <td><%= behavior.gorilla.group %></td>
             <td>
               <a href="/behaviors/<%= behavior._id %>">
                 <button>Details</button></td>
@@ -52,7 +49,7 @@
         <th>Gorilla</th>
         <th>Behavior</th>
         <th>Keeper</th>
-        <th>Status</th>
+        <th>Social Group</th>
         <th></th>
       </tr>
     </thead>
@@ -63,7 +60,7 @@
             <td><%= behavior.gorilla.name %></td>
             <td><%= behavior.behavior %></td>
             <td><%= behavior.keeper.name %></td>
-            <td><%= behavior.status %></td>
+            <td><%= behavior.gorilla.group %></td>
             <td>
               <a href="/behaviors/<%= behavior._id %>">
                 <button>Details</button></td>
@@ -80,7 +77,7 @@
         <th>Gorilla</th>
         <th>Behavior</th>
         <th>Keeper</th>
-        <th>Status</th>
+        <th>Social Group</th>
         <th></th>
       </tr>
     </thead>
@@ -91,7 +88,7 @@
             <td><%= behavior.gorilla.name %></td>
             <td><%= behavior.behavior %></td>
             <td><%= behavior.keeper.name %></td>
-            <td><%= behavior.status %></td>
+            <td><%= behavior.gorilla.group %></td>
             <td>
               <a href="/behaviors/<%= behavior._id %>">
                 <button>Details</button></td>

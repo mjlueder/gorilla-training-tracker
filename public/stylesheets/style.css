@@ -12,8 +12,12 @@ html {
 }
 
 body {
-  background-color: #81ba94;
-  color: #f6f6f6;
+  /* background-color: #244931; */
+  /* color: #f6f6f6; */
+  background-image: url('../assets/leaves.jpg');
+  background-size: cover;
+  backdrop-filter: blur(2px);
+  color: #f9f9f9;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
     'Helvetica Neue', sans-serif;
@@ -21,13 +25,15 @@ body {
 }
 
 nav {
-  background-color: #f6f6f6;
-  color: #1a1a1a;
+  color: #f6f6f6;
+  background-color: #0a150a;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-right: 10px;
-  min-height: 70px;
+  height: 70px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
 }
 
 main {
@@ -35,6 +41,7 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-family: 'Roboto Slab', serif;
 }
 
 main img {
@@ -43,6 +50,7 @@ main img {
 
 nav > div.icon {
   width: 200px;
+  height: 70px;
 }
 
 nav > div.oauth {
@@ -64,16 +72,16 @@ nav a {
   text-decoration: none;
   padding: 5px;
   border-radius: 5px;
-  color: #2f773a;
+  color: white;
 }
 
 nav a:visited {
-  color: #424748;
+  color: white;
 }
 
 nav a:hover {
-  color: white;
-  background-color: #424748;
+  color: #65BC7B;
+  /* background-color: #424748; */
 }
 
 nav a.active {
@@ -82,4 +90,8 @@ nav a.active {
 
 .right {
   margin-left: auto;
+}
+
+#navicon {
+  /* backdrop-filter: invert(100%); */
 }

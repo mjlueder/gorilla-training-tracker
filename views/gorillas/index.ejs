@@ -4,6 +4,7 @@
 
 <main>
 <h1>Gorillas</h1>
+<h2>Family</h2>
 <table>
   <thead>
     <tr>
@@ -16,24 +17,56 @@
   </thead>
   <tbody>
     <% gorillas.forEach(gorilla => { %>
-      <tr>
-        <td><%= gorilla.name %></td>
-        <td><%= gorilla.age %></td>
-        <td><%= gorilla.sex === "Male" ? 'M' : 'F' %></td>
-        <td><%= gorilla.group %></td>
-        <td>
-          <a href="/gorillas/<%= gorilla._id %>">
-            <button>Details</button>
-          </a>
-        </td>
-      </tr>
+      <% if (gorilla.group === "Family") { %>
+        <tr>
+          <td><%= gorilla.name %></td>
+          <td><%= gorilla.age %></td>
+          <td><%= gorilla.sex === "Male" ? 'M' : 'F' %></td>
+          <td><%= gorilla.group %></td>
+          <td>
+            <a href="/gorillas/<%= gorilla._id %>">
+              <button>Details</button>
+            </a>
+          </td>
+        </tr>
+      <% } %>
+    <% }) %>
+  </tbody>
+</table>
+
+<h2>Bachelor</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Sex</th>
+      <th>Social Group</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% gorillas.forEach(gorilla => { %>
+      <% if (gorilla.group === "Bachelor") { %>
+        <tr>
+          <td><%= gorilla.name %></td>
+          <td><%= gorilla.age %></td>
+          <td><%= gorilla.sex === "Male" ? 'M' : 'F' %></td>
+          <td><%= gorilla.group %></td>
+          <td>
+            <a href="/gorillas/<%= gorilla._id %>">
+              <button>Details</button>
+            </a>
+          </td>
+        </tr>
+      <% } %>
     <% }) %>
   </tbody>
 </table>
 
 <% if (user) { %>
   <a href="/gorillas/new">
-    <button>Add a Gorilla</button>
+    <button id="add-btn">Add a Gorilla</button>
   </a>
   <!-- <h2>Add a Gorilla</h2>
   <form action="/gorillas" method="POST">
