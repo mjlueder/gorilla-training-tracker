@@ -1,8 +1,8 @@
 form {
   display: grid;
-  grid-template-columns: 120px 160px;
-  grid-gap: 10px;
-  margin-bottom: 50px;
+  grid-template-columns: 180px 240px;
+  grid-gap: 16px;
+  font-size: 24px;
 }
 
 form * {

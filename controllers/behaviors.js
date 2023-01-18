@@ -39,7 +39,7 @@ function create(req, res) {
   req.body.keeper = req.user.profile._id
   Behavior.create(req.body)
   .then(behavior => {
-    res.redirect('/behaviors')
+    res.redirect(`/behaviors/${behavior._id}`)
   })
   .catch(err => {
     res.redirect('/')
