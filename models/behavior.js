@@ -11,6 +11,7 @@ const behaviorSchema = new Schema({
     enum: ['Shaping', 'Maintenance', 'Regressed']
   },
   comment: String,
+  image: String,
 }, {
   timestamps: true
 })

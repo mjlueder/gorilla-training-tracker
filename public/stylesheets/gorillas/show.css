@@ -44,6 +44,7 @@ td {
   display: flex;
   justify-content: center;
 }
+
 #user-img {
   /* float: right; */
   max-width: 440px;

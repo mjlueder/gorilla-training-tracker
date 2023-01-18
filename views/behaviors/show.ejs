@@ -5,31 +5,43 @@
 <main>
   <% if (user) { %>
   <h1>Behavior Details</h1>
-  <div id="show">
-    <div>Behavior:</div>
-    <div><%= behavior.behavior %></div>
-    <div>Gorilla:</div>
-    <a href="/gorillas/<%= behavior.gorilla._id %>">
-      <button><%= behavior.gorilla.name %></button>
-    </a>
-    <!-- <div></div> -->
-    <div>Keeper:</div>
-    <div><%= behavior.keeper.name %></div>
-    <div>Status:</div>
-    <div><%= behavior.status %></div>
-    <% if (behavior.comment) { %>
-      <div>Comment:</div>
-      <div><%= behavior.comment %></div>
+  <div <%- behavior.image ? 'id="top"' : ''%>>
+    <div id="show">
+      <div>Behavior:</div>
+      <div><%= behavior.behavior %></div>
+      <div>Gorilla:</div>
+      <a href="/gorillas/<%= behavior.gorilla._id %>">
+        <button><%= behavior.gorilla.name %></button>
+      </a>
+      <!-- <div></div> -->
+      <div>Keeper:</div>
+      <div><%= behavior.keeper.name %></div>
+      <div>Status:</div>
+      <div><%= behavior.status %></div>
+      <% if (behavior.comment) { %>
+        <div>Comment:</div>
+        <div><%= behavior.comment %></div>
+      <% } %>
+      
+      <% if (behavior.keeper.equals(user.profile._id)) { %>
+        <div></div>
+        <div>
+          <a href="/behaviors/<%= behavior._id %>/edit">
+            <button>Edit Behavior</button>
+          </a>
+          <form action="/behaviors/<%= behavior._id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete Behavior</button>
+          </form>
+        </div>
+      <% } %>
+    </div>
+        
+    <% if (behavior.image) { %>
+      <div id="img-div">
+          <img id="user-img" src="<%= behavior.image %>" alt="gorilla training">
+      </div>
     <% } %>
   </div>
-  <% if (behavior.keeper.equals(user.profile._id)) { %>
-    <a href="/behaviors/<%= behavior._id %>/edit">
-      <button>Edit Behavior</button>
-    </a>
-    <form action="/behaviors/<%= behavior._id %>?_method=DELETE" method="POST">
-      <button type="submit">Delete Behavior</button>
-    </form>
-  <% } %>
 <% } %>
 </main>
 <%- include('../partials/footer') %>
