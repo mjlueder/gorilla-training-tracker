@@ -23,17 +23,17 @@
         <div><%= behavior.comment %></div>
       <% } %>
       
-      <% if (behavior.keeper.equals(user.profile._id)) { %>
-        <div></div>
-        <div>
+      <div></div>
+      <div>
+        <% if (behavior.keeper.equals(user.profile._id)) { %>
           <a href="/behaviors/<%= behavior._id %>/edit">
             <button>Edit Behavior</button>
           </a>
           <form action="/behaviors/<%= behavior._id %>?_method=DELETE" method="POST">
             <button type="submit">Delete Behavior</button>
           </form>
+        <% } %>
         </div>
-      <% } %>
     </div>
     
     
@@ -49,20 +49,7 @@
   </div>
 
   <h2>Training Log Entries</h2>
-  <% if (behavior.keeper.equals(user.profile._id)) { %>
-    <h3>Add Entry</h3>
-    <form action="/behaviors/<%= behavior._id %>/entries" method="POST">
-      <label for="date-input">Date:</label>
-      <input type="date" name="date" id="date-input">
-      <label for="content-input">Entry:</label>
-      <textarea name="content" id="content-input" cols="30" rows="4"></textarea>
-      <button type="submit">Add Entry</button>
-    </form>
-  <% } %>
-
-
-
-
+  
   <table>
     <thead>
       <tr>
@@ -89,6 +76,18 @@
         <% }) %> 
     </tbody>
   </table>
+
+  <% if (behavior.keeper.equals(user.profile._id)) { %>
+    <h3>Add Entry</h3>
+    <form action="/behaviors/<%= behavior._id %>/entries" method="POST" id="add-entries">
+      <label for="date-input">Date:</label>
+      <input type="date" name="date" id="date-input">
+      <label for="content-input">Entry:</label>
+      <textarea name="content" id="content-input" cols="30" rows="4"></textarea>
+      <div></div>
+      <button type="submit">Add Entry</button>
+    </form>
+  <% } %>
 <% } %>
 </main>
 <%- include('../partials/footer') %>
