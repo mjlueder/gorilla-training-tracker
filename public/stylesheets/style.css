@@ -44,8 +44,21 @@ main {
   font-family: 'Roboto Slab', serif;
 }
 
+button {
+  /* background-color: #65BC7B; */
+  background-color: #68c07e;
+  color: rgb(2, 42, 7);
+  padding: 0 15px;
+  height: 30px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  /* font-weight: bold; */
+  border: none;
+  border-radius: 5px;
+}
+
 main img {
-  border: 3px solid rgb(175, 249, 212);
+  border: 3px solid rgb(136, 222, 155); 
   border-radius: 30px;
 }
 

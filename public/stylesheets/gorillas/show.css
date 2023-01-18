@@ -1,12 +1,16 @@
-img {
-  /* display: inline-block; */
+h2 {
+  margin-top: 40px;
 }
 
 table {
   table-layout: fixed;
   width: 60%;
   border-collapse: collapse;
-  /* border: 3px solid purple; */
+  margin-bottom: 40px;
+}
+
+th {
+  border-bottom: 2px solid #f6f6f6;
 }
 
 thead th:nth-child(1) {
@@ -37,7 +41,7 @@ td {
 
 #top {
   display: grid;
-  grid-template-columns: 440px 450px;
+  grid-template-columns: 440px 410px;
 }
 
 #img-div {
@@ -47,9 +51,9 @@ td {
 
 #user-img {
   /* float: right; */
-  max-width: 440px;
+  max-width: 400px;
   width: auto;
-  max-height: 440px;
+  max-height: 400px;
   height: auto;
 }
 

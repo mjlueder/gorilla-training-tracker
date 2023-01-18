@@ -9,3 +9,14 @@ form * {
   padding: 2px;
   border-radius: 5px;
 }
+
+#cancel {
+  display: grid;
+  grid-template-columns: 180px 240px;
+  grid-gap: 16px;
+  font-size: 24px;
+}
+
+#cancel button {
+  margin-top: 16px;
+}

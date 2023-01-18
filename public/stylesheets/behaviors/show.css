@@ -23,11 +23,15 @@
   font-size: 24px;
 }
 
-#show * {
+#show div {
   padding: 2px;
   border-radius: 5px;
 }
 
 #show div:nth-child(odd) {
   font-weight: bold;
+}
+
+#gorilla-btn {
+  font-size: 18px;
 }
