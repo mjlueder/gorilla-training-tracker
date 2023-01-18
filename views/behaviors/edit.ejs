@@ -3,7 +3,7 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <% if (user) { %>
+  <% if (behavior.keeper.equals(user.profile._id)) { %>
   <h1>Edit Behavior</h1>
   <form action="/behaviors/<%= behavior._id %>?_method=PUT" method="POST">
     <label for="gorilla-select">Gorilla:</label>

@@ -4,11 +4,6 @@
 
 <main>
 <h1>Gorillas</h1>
-<% if (user) { %>
-  <a href="/gorillas/new">
-    <button id="add-btn">Add a Gorilla</button>
-  </a>
-<% } %>
 
 <h2>Family</h2>
 <table>
@@ -70,7 +65,11 @@
   </tbody>
 </table>
 
-
+<% if (user) { %>
+  <a href="/gorillas/new">
+    <button id="add-btn">Add a Gorilla</button>
+  </a>
+<% } %>
 
 </main>
 <%- include('../partials/footer') %>
