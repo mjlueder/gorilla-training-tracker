@@ -5,7 +5,7 @@
 <main>
   <% if (user) { %>
   <h1>Behavior Details</h1>
-  <div <%- behavior.image ? 'id="top"' : ''%>>
+  <div <%- (behavior.image || behavior.gorilla.image) ? 'id="top"' : ''%>>
     <div id="show">
       <div>Behavior:</div>
       <div><%= behavior.behavior %></div>
@@ -35,10 +35,15 @@
         </div>
       <% } %>
     </div>
-        
+    
+    
     <% if (behavior.image) { %>
       <div id="img-div">
-          <img id="user-img" src="<%= behavior.image %>" alt="gorilla training">
+        <img id="user-img" src="<%= behavior.image %>" alt="gorilla training">
+      </div>
+     <% } else if (behavior.gorilla.image) { %>
+      <div id="img-div">
+        <img id="user-img" src="<%= behavior.gorilla.image %>" alt="gorilla">
       </div>
     <% } %>
   </div>
