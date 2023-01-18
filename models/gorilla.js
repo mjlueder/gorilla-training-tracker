@@ -14,6 +14,7 @@ const gorillaSchema = new Schema({
     enum: ['Family', 'Bachelor']
   },
   family: String,
+  image: String,
 }, {
   timestamps: true
 })

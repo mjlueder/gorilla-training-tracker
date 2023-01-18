@@ -24,7 +24,9 @@
     </select>
     <label for="comment-input">Comment:</label>
     <textarea name="comment" value="<%= behavior.comment %>" id="comment-input" rows="8"><%= behavior.comment %></textarea>
-    <div></div>
+    <a href="/behavior/<%= behavior._id %>">
+      <button>Back</button>
+    </a>
     <button type="submit">Submit</button>
   </form>
 <% } %>

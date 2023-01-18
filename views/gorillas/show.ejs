@@ -4,17 +4,24 @@
 
 <main>
   <h1>Gorilla Details</h1>
-  <div id="show">
-    <div>Name:</div>
-    <div><%= gorilla.name %></div>
-    <div>Age:</div>
-    <div><%= gorilla.age %></div>
-    <div>Sex:</div>
-    <div><%= gorilla.sex %></div>
-    <div>Group:</div>
-    <div><%= gorilla.group %></div>
-    <div>Familial Relationships:</div>
-    <div><%= gorilla.family %></div>
+  <div <%- gorilla.image ? 'id="top"' : ''%> >
+    <div id="show">
+      <div>Name:</div>
+      <div><%= gorilla.name %></div>
+      <div>Age:</div>
+      <div><%= gorilla.age %></div>
+      <div>Sex:</div>
+      <div><%= gorilla.sex %></div>
+      <div>Group:</div>
+      <div><%= gorilla.group %></div>
+      <div>Familial Relationships:</div>
+      <div><%= gorilla.family %></div>
+    </div>
+    <% if (gorilla.image) { %>
+      <div id="img-div">
+          <img id="user-img" src="<%= gorilla.image %>" alt="">
+      </div>
+    <% } %>
   </div>
 
   <% if (user) { %>
