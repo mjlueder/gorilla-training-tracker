@@ -2,13 +2,13 @@
 
 # Gorilla Training Tracker
 
-For animals in human care, being able to participate in their own health management has huge phsyical, mental, and social benefits. Training is mentally stimulating, gives individual animals control over their environments, and allows the people who care for them to do so easily and well. That is why many animals participate in voluntary husbandry (managment and care) training.
+For animals in human care, being able to participate in health management has huge phsyical, mental, and social benefits. Training is mentally stimulating, gives animals control over their environments, and allows the people who care for them to do so easily and well. That is why many animals participate in voluntary husbandry (managment and care) training.
 
-An app to allow team coordination and tracking of training behaviors for multiple groups of gorillas. This app helps improve functionality and monitoring of training progress, and has an easy-to-follow, intuitive design flow. It is designed for work environments that are desktop focused (and in fact often run on secure networks that do not allow access via mobile), but future adaptations could include more mobile-focused design for professionals like dog trainers, who have more flexibility and work on-the-go.
+This app allows teams to coordinate and track training behaviors for multiple groups of animals. It helps improve functionality and monitoring of training progress, and has an easy-to-follow, intuitive design flow. It is designed for work environments that are desktop-focused (and in fact often run on secure networks that do not allow access via mobile), but future adaptations could include more mobile-focused design for professionals like dog trainers, who have more flexibility and work on-the-go.
 
 Come see what these stunning animals are learning!
 
-## [Train Gorillas Here!](https://gorilla-training-tracker.fly.dev/)
+## [✨Train Gorillas Here! 🦍](https://gorilla-training-tracker.fly.dev/)
 
 [Planning Materials](https://trello.com/b/PANVRNWF/ml-training-app)
 
