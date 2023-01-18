@@ -4,6 +4,12 @@
 
 <main>
 <h1>Gorillas</h1>
+<% if (user) { %>
+  <a href="/gorillas/new">
+    <button id="add-btn">Add a Gorilla</button>
+  </a>
+<% } %>
+
 <h2>Family</h2>
 <table>
   <thead>
@@ -64,34 +70,7 @@
   </tbody>
 </table>
 
-<% if (user) { %>
-  <a href="/gorillas/new">
-    <button id="add-btn">Add a Gorilla</button>
-  </a>
-  <!-- <h2>Add a Gorilla</h2>
-  <form action="/gorillas" method="POST">
-    <label for="name-input">Name:</label>
-    <input name="name" type="text" id="name-input" autocomplete="off">
-    <label for="age-input">Age:</label>
-    <input name="age" type="text" id="age-input" autocomplete="off">
-    <label for="sex-select">Sex:</label>
-    <select name="sex" id="sex-select">
-      <option value="">---Sex---</option>
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-    </select>
-    <label for="group-input">Social Group:</label>
-    <select name="group" id="group-input">
-      <option value="">---Group---</option>
-      <option value="Family">Family</option>
-      <option value="Bachelor">Bachelor</option>
-    </select>
-    <label for="family-input">Family:</label>
-    <textarea name="family" id="family-input"></textarea>
-    <div></div>
-    <button type="submit">Submit</button>
-  </form> -->
-<% } %>
+
 
 </main>
 <%- include('../partials/footer') %>
