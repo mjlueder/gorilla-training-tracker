@@ -51,6 +51,7 @@ function show(req, res) {
   Behavior.findById(req.params.id)
   .populate('gorilla')
   .populate('keeper')
+  .populate('entries')
   .then(behavior => {
     res.render('behaviors/show', {
       title: 'Behavior Details',
@@ -119,6 +120,46 @@ function deleteBehavior(req, res) {
   })
 }
 
+function addEntry(req, res) {
+  Behavior.findById(req.params.id)
+  .then(behavior => {
+    behavior.entries.unshift(req.body)
+    behavior.save()
+    .then(() => {
+      console.log(behavior);
+      res.redirect(`/behaviors/${behavior._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/behaviors')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/behaviors')
+  })
+}
+
+function deleteEntry(req, res) {
+  Behavior.findById(req.params.behaviorId)
+  .then(behavior => {
+    const entry = behavior.entries.id(req.params.entryId)
+    behavior.entries.remove(entry)
+    behavior.save()
+    .then(() => {
+      res.redirect(`/behaviors/${behavior._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/behaviors')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/behaviors')
+  })
+}
+
 export {
   index,
   newBehavior as new,
@@ -127,4 +168,6 @@ export {
   edit,
   update,
   deleteBehavior as delete,
+  addEntry,
+  deleteEntry,
 }
