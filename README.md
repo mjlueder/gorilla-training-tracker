@@ -1,4 +1,5 @@
-![App screenshot](/assets/screenshot-1)
+![App screenshot index page](./public/assets/screenshot-1.png)
+![App screenshot gorilla training page](./public/assets/screenshot-2.png)
 
 # Gorilla Training Tracker
 
