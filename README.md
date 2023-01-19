@@ -1,6 +1,5 @@
-###Behavior Index Page
 ![App screenshot index page](./public/assets/screenshot-1.png) 
-###Training Details Page
+
 ![App screenshot gorilla training page](./public/assets/screenshot-2.png)
 
 # Gorilla Training Tracker
