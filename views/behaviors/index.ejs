@@ -8,12 +8,12 @@
     <h1>Please login to see this page</h1>
     <img src="/assets/Grace.jpeg" alt="Baby gorilla eating a banana leaf">
   <% } %>
+
   <% if (user) { %>
-  <!-- <div id="buttons"> -->
     <a href="/behaviors/new">
       <button>Add New Behavior</button>
     </a>
-  <!-- </div> -->
+
   <h2>Shaping: In training</h2>
   <table>
     <thead>
@@ -43,6 +43,7 @@
       <% }) %>
     </tbody>
   </table>
+
   <h2>Maintenance: Fully trained</h2>
   <table>
     <thead>
@@ -71,6 +72,7 @@
       <% }) %>
     </tbody>
   </table>
+  
   <h2>Regressed: Needs to be re-shaped</h2>
   <table>
     <thead>

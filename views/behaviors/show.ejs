@@ -51,7 +51,7 @@
   <% if (behavior.keeper.equals(user.profile._id) || behavior.entries.length) { %>
     <h2>Training Log Entries</h2>
   <% } %> 
-  
+
   <% if (behavior.entries.length) { %>
     <table>
       <thead>
@@ -88,7 +88,7 @@
       <input type="date" name="date" id="date-input">
       <label for="content-input">Entry:</label>
       <!-- <textarea name="content" id="content-input" cols="30" rows="4"></textarea> -->
-      <input name="content" id="content-input" type="text">
+      <input name="content" id="content-input" type="text" autocomplete="off">
       <!-- <div></div> -->
       <button type="submit">Add Entry</button>
     </form>
