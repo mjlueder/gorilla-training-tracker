@@ -31,7 +31,7 @@ thead th:nth-child(4) {
 }
 
 thead th:nth-child(5){
- width: 15%;
+  width: 15%;
 }
 
 th,
@@ -39,3 +39,20 @@ td {
   padding: 10px;
 }
 
+@media only screen and (max-width: 550px){
+  table {
+    width: 90%;
+  }
+
+  thead th:nth-child(4), tr td:nth-child(4) {
+    display: none;
+  }
+
+  thead th:nth-child(1) {
+    width: 30%;
+  }
+
+  thead th:nth-child(5){
+    width: 25%;
+  }
+}
