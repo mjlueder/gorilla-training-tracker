@@ -4,7 +4,7 @@ h2 {
 
 table {
   table-layout: fixed;
-  width: 60%;
+  width: 70%;
   border-collapse: collapse;
   margin-bottom: 40px;
 }
@@ -26,11 +26,7 @@ thead th:nth-child(3) {
 }
 
 thead th:nth-child(4) {
-  width: 10%;
-}
-
-thead th:nth-child(5) {
-  width: 10%;
+  width: 18%;
 }
 
 th,
@@ -72,4 +68,19 @@ td {
 
 #show div:nth-child(odd) {
   font-weight: 600;
+}
+
+@media only screen and (max-width: 550px){
+  table {
+    width: 90%;
+  }
+
+  #top {
+    display: grid;
+    grid-template-columns: 350px;
+  }
+
+  #show {
+    grid-template-columns: 150px 180px;
+  }
 }
