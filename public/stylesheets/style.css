@@ -102,3 +102,18 @@ nav a.active {
 .right {
   margin-left: auto;
 }
+
+@media only screen and (max-width: 550px){
+  nav {
+    height: 80px;
+  }
+  nav > div.icon, nav > div.oauth {
+    width: 100px;
+  }
+  nav > div.oauth {
+    margin-right: 10px;
+  }
+  nav > div.links {
+    width: 200px;
+  }
+}

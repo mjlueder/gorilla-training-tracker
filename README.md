@@ -4,7 +4,7 @@
 
 For animals in human care, being able to participate in health management has huge phsyical, mental, and social benefits. Training is mentally stimulating, gives animals control over their environments, and allows the people who care for them to do so easily and well. That is why many animals participate in voluntary husbandry (managment and care) training.
 
-This app allows teams to coordinate and track training behaviors for multiple groups of animals. It helps improve functionality and monitoring of training progress, and has an easy-to-follow, intuitive design flow. It is designed for work environments that are desktop-focused (and in fact often run on secure networks that do not allow access via mobile), but future adaptations could include more mobile-focused design for professionals like dog trainers, who have more flexibility and work on-the-go.
+This app allows teams to coordinate and track training behaviors for multiple groups of animals. It helps improve functionality and monitoring of training progress, and has an easy-to-follow, intuitive design flow. It is designed for work environments that are desktop-focused, but also works on mobile.Future adaptations could include more mobile-focused designs for professionals like dog trainers, who have more flexibility and work on-the-go.
 
 Come see what these stunning animals are learning!
 
@@ -45,11 +45,11 @@ Come see what these stunning animals are learning!
 * As a user, I would like to be able to add a photo when I add a behavior
 
 ### Icebox Items 🧊 
-- [ ] Sort and filter functionality on the behavior index page
+- [ ] Add sort and filter functionality on the behavior index page
 - [ ] Add in more photo functionality
 - [ ] Include training videos
 - [ ] Add a section for standardized training cues and criteria
-- [ ] Adapt design to be more mobile-friendly
+- [x] Adapt design to be more mobile-friendly
 
 ### Attributions:
 * Nunito Sans: [Google Fonts](https://fonts.google.com/specimen/Nunito+Sans?query=nunito+sans)
