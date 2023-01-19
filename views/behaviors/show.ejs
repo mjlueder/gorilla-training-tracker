@@ -24,7 +24,7 @@
       <% } %>
       
       <div></div>
-      <div>
+      <div id="edit-btns">
         <% if (behavior.keeper.equals(user.profile._id)) { %>
           <a href="/behaviors/<%= behavior._id %>/edit">
             <button>Edit Behavior</button>
@@ -33,7 +33,7 @@
             <button type="submit">Delete Behavior</button>
           </form>
         <% } %>
-        </div>
+      </div>
     </div>
     
     
@@ -49,33 +49,34 @@
   </div>
 
   <h2>Training Log Entries</h2>
-  
-  <table>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Comment</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% behavior.entries.forEach(entry => { %>
-          <tr>
-            <td><%= entry.date.toISOString().slice(0, 10) %></td>
-            <td><%= entry.content %></td>
-            <td>
-              <% if (behavior.keeper.equals(user.profile._id)) { %>
-                <form 
-                action="/behaviors/<%= behavior._id %>/entries/<%= entry._id %>?_method=DELETE" 
-                method="POST">
-                  <button type="submit">X</button>
-                </form>
-              <% } %>
-            </td>
-          </tr>
-        <% }) %> 
-    </tbody>
-  </table>
+  <% if (behavior.entries.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Comment</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% behavior.entries.forEach(entry => { %>
+            <tr>
+              <td><%= entry.date.toISOString().slice(0, 10) %></td>
+              <td><%= entry.content %></td>
+              <td>
+                <% if (behavior.keeper.equals(user.profile._id)) { %>
+                  <form 
+                  action="/behaviors/<%= behavior._id %>/entries/<%= entry._id %>?_method=DELETE" 
+                  method="POST">
+                    <button type="submit">X</button>
+                  </form>
+                <% } %>
+              </td>
+            </tr>
+          <% }) %> 
+      </tbody>
+    </table>
+  <% } %>
 
   <% if (behavior.keeper.equals(user.profile._id)) { %>
     <h3>Add Entry</h3>
@@ -83,8 +84,9 @@
       <label for="date-input">Date:</label>
       <input type="date" name="date" id="date-input">
       <label for="content-input">Entry:</label>
-      <textarea name="content" id="content-input" cols="30" rows="4"></textarea>
-      <div></div>
+      <!-- <textarea name="content" id="content-input" cols="30" rows="4"></textarea> -->
+      <input name="content" id="content-input" type="text">
+      <!-- <div></div> -->
       <button type="submit">Add Entry</button>
     </form>
   <% } %>

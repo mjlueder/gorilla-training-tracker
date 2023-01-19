@@ -1,4 +1,4 @@
-![App screenshot](   )
+![App screenshot](/assets/screenshot-1)
 
 # Gorilla Training Tracker
 
@@ -45,6 +45,7 @@ Come see what these stunning animals are learning!
 * As a user, I would like to be able to add a photo when I add a behavior
 
 ### Icebox Items 🧊 
+- [ ] Sort and filter functionality on the behavior index page
 - [ ] Add in more photo functionality
 - [ ] Include training videos
 - [ ] Add a section for standardized training cues and criteria

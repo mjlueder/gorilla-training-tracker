@@ -62,6 +62,8 @@ td {
   grid-template-columns: 180px 240px;
   grid-gap: 16px;
   font-size: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #show * {
@@ -70,5 +72,5 @@ td {
 }
 
 #show div:nth-child(odd) {
-  font-weight: bold;
+  font-weight: 600;
 }

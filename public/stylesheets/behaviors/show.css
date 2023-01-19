@@ -1,6 +1,11 @@
 h2 {
   margin-top: 80px;
 }
+
+h3 {
+  margin-top: 40px;
+}
+
 table {
   text-align: left;
   margin-bottom: 20px;
@@ -40,14 +45,23 @@ tr td:nth-child(5){
 
 #add-entries {
   display: grid;
-  grid-template-columns: 100px 200px;
-  grid-gap: 16px;
-  margin-bottom: 40px;
+  grid-template-columns: 8% 20% 8% 45% 15%;
+  width: 60%;
+  grid-gap: 8px;
+  margin-bottom: 40px; 
+  align-items: center;
+  
+}
+
+#add-entries input {
+  border-radius: 5px;
+  height: 30px;
+  padding: 4px 0;
 }
 
 #top {
   display: grid;
-  grid-template-columns: 440px 450px;
+  grid-template-columns: 410px 450px;
 }
 
 #img-div {
@@ -64,7 +78,7 @@ tr td:nth-child(5){
 
 #show {
   display: grid;
-  grid-template-columns: 180px 240px;
+  grid-template-columns: 150px 240px;
   grid-gap: 16px;
   font-size: 24px;
 }
@@ -80,4 +94,8 @@ tr td:nth-child(5){
 
 #gorilla-btn {
   font-size: 18px;
+}
+
+#edit-btns button {
+  margin-bottom: 8px;
 }

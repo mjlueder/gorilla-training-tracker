@@ -24,11 +24,15 @@
     </select>
     <label for="comment-input">Comment:</label>
     <textarea name="comment" value="<%= behavior.comment %>" id="comment-input" rows="8"><%= behavior.comment %></textarea>
-    <a href="/behavior/<%= behavior._id %>">
-      <button>Back</button>
-    </a>
+    <div></div>
     <button type="submit">Submit</button>
   </form>
+  <div id="cancel">
+    <div></div>
+    <a href="/behaviors/<%= behavior._id %>">
+      <button>Cancel</button>
+    </a>
+  </div>
 <% } %>
 </main>
 <%- include('../partials/footer') %>

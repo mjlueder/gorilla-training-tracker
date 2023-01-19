@@ -53,6 +53,7 @@ function show(req, res) {
   .populate('keeper')
   .populate('entries')
   .then(behavior => {
+    console.log(behavior);
     res.render('behaviors/show', {
       title: 'Behavior Details',
       behavior
