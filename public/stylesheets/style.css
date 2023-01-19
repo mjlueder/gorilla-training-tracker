@@ -27,7 +27,8 @@ body {
 
 nav {
   color: #f6f6f6;
-  background-color: #0a150a;
+  /* background-color: #0a150a; */
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
