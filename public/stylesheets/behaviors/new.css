@@ -20,3 +20,12 @@ form * {
 #cancel button {
   margin-top: 16px;
 }
+
+@media only screen and (max-width: 550px){
+  form {
+    display: grid;
+    grid-template-columns: 40% 50%;
+    grid-gap: 16px;
+    font-size: 24px;
+  }
+}
