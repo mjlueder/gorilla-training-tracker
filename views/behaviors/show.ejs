@@ -48,7 +48,10 @@
     <% } %>
   </div>
 
-  <h2>Training Log Entries</h2>
+  <% if (behavior.keeper.equals(user.profile._id) || behavior.entries.length) { %>
+    <h2>Training Log Entries</h2>
+  <% } %> 
+  
   <% if (behavior.entries.length) { %>
     <table>
       <thead>

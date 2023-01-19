@@ -8,7 +8,6 @@ router.get('/', gorillasCtrl.index)
 router.get('/new', isLoggedIn, gorillasCtrl.new)
 router.get('/:id', gorillasCtrl.show)
 
-
 router.post('/', isLoggedIn, gorillasCtrl.create)
 
 export {

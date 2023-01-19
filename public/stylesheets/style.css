@@ -12,12 +12,11 @@ html {
 }
 
 body {
-  /* background-color: #244931; */
-  /* color: #f6f6f6; */
-  background-image: url('../assets/leaves.jpg');
+  background-image: url('../assets/leaves-2.jpeg');
   background-size: cover;
-  /* background-size: auto; */
   backdrop-filter: blur(2px);
+  height: 100vh;
+  background-color: rgb(9, 40, 9);
   color: #f9f9f9;
   /* Use a system font, if none are available use any found sans-sarif font */
   font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
@@ -27,7 +26,6 @@ body {
 
 nav {
   color: #f6f6f6;
-  /* background-color: #0a150a; */
   background-color: black;
   display: flex;
   align-items: center;
@@ -47,14 +45,12 @@ main {
 }
 
 button {
-  /* background-color: #65BC7B; */
   background-color: #68c07e;
   color: rgb(2, 42, 7);
   padding: 0 15px;
   height: 30px;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 14px;
-  /* font-weight: bold; */
   border: none;
   border-radius: 5px;
 }
@@ -97,7 +93,6 @@ nav a:visited {
 
 nav a:hover {
   color: #65BC7B;
-  /* background-color: #424748; */
 }
 
 nav a.active {
@@ -106,8 +101,4 @@ nav a.active {
 
 .right {
   margin-left: auto;
-}
-
-#navicon {
-  /* backdrop-filter: invert(100%); */
 }
