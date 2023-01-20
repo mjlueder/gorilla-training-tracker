@@ -28,21 +28,20 @@ Come see what these stunning animals are learning!
 ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
 
 ### MVP 💻
-* AAU or a guest, I should be able to go to a page and see a list of all gorillas
-* AAU I should be able to add a gorilla to the database
-* AAU I should be able to go to a page and see a list of all training behaviors
-* AAU I should be able to add a training behavior from a "new" page
-* AAU, I should be able to click on a behavior and see its details on a new page
-* AAU who is training a behavior, I should be able to edit & update the behavior
-* AAU who is training a behavior, I should be able to delete that behavior
+* Users and guests can see a list of all gorillas
+* Users can add a gorilla to the database
+* Users can see a list of all training behaviors
+* Users can add a training behavior from a "new" page
+* Users can click on a behavior and see its details on a new page
+* A user who is training a behavior can edit & update the behavior
+* A user who is training a behavior can delete that behavior
 
 ### Added Features ✨
-* AAU, I should be able to see the list of behaviors grouped by status (shaping, maintenance, regressed)
-* AAU, I should be able to click on a gorilla and see its details on a new page
-* AAU, on the behavior index page, I should be able to select a gorilla name and see all the behaviors associated with that gorilla
-* AAU or a guest, I should be able to see the list of gorillas sorted by social grouping
-* AAU, I would like to be able to add a photo when I add a gorilla
-* As a user, I would like to be able to add a photo when I add a behavior
+* Behaviors are grouped by status (shaping, maintenance, regressed)
+* Users and guests can click on a gorilla and see its details on a new page
+* Users can select a gorilla and see all the behaviors associated with that gorilla
+* The gorilla index is sorted by social group
+* Users can add a photo when they add a gorilla
 
 ### Icebox Items 🧊 
 - [ ] Add sort and filter functionality on the behavior index page
