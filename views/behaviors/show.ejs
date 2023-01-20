@@ -85,7 +85,7 @@
     <h3>Add Entry</h3>
     <form action="/behaviors/<%= behavior._id %>/entries" method="POST" id="add-entries">
       <label for="date-input">Date:</label>
-      <input type="date" name="date" id="date-input">
+      <input type="date" name="date" id="date-input" required>
       <label for="content-input">Entry:</label>
       <!-- <textarea name="content" id="content-input" cols="30" rows="4"></textarea> -->
       <input name="content" id="content-input" type="text" autocomplete="off">

@@ -120,4 +120,7 @@ nav a.active {
   nav > div.links {
     width: 200px;
   }
+  #landing-photo {
+    width: 95%;
+  }
 }
