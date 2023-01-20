@@ -57,4 +57,5 @@ Come see what these stunning animals are learning!
 * Favicon: [ShutterStock](https://www.shutterstock.com/image-vector/head-gorilla-silhouette-symbol-illustration-isolated-1609863988)
 * Nav Bar Logo: [ShutterStock](https://www.shutterstock.com/image-vector/gorilla-logo-design-icon-vector-illustration-1502595530)
 * Markdown Badges: [GitHub](https://github.com/Ileriayo/markdown-badges)
-
+* Landing Page Background Image: [Unsplash](https://unsplash.com/photos/abDPQtcEtUQ)
+* Background Image:[Unsplash](https://unsplash.com/photos/hnysCJrPpkc)
