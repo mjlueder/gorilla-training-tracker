@@ -55,5 +55,6 @@ Come see what these stunning animals are learning!
 * Nunito Sans: [Google Fonts](https://fonts.google.com/specimen/Nunito+Sans?query=nunito+sans)
 * Roboto Slab: [Google Fonts](https://fonts.google.com/specimen/Roboto+Slab?query=roboto+slab)
 * Favicon: [ShutterStock](https://www.shutterstock.com/image-vector/head-gorilla-silhouette-symbol-illustration-isolated-1609863988)
+* Nav Bar Logo: [ShutterStock](https://www.shutterstock.com/image-vector/gorilla-logo-design-icon-vector-illustration-1502595530)
 * Markdown Badges: [GitHub](https://github.com/Ileriayo/markdown-badges)
 
