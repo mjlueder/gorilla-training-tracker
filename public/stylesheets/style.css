@@ -103,10 +103,6 @@ nav a.active {
   margin-left: auto;
 }
 
-#landing-photo {
-  width: 80%;
-}
-
 @media only screen and (max-width: 550px){
   nav {
     height: 80px;
